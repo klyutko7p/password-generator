@@ -1,27 +1,28 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-</template>
+<script setup lang="ts">
+import Generator from './pages/Generator.vue';
 
-<script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
-
-@Options({
-  components: {
-    HelloWorld,
-  },
-})
-export default class App extends Vue {}
 </script>
 
+<template>
+  <div class="container mx-auto">
+    <Generator></Generator>
+  </div>
+</template>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700);
+@import url("https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css");
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+
+:root {
+  --main-color: #FF907C;
+  --semi-color: white;
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--semi-color);
+  font-family: 'Comfortaa', sans-serif;
 }
 </style>
