@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Generator from './pages/Generator.vue';
+import Generator from './pages/Home.vue';
 
 </script>
 
