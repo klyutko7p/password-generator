@@ -9,7 +9,5 @@
 import Credits from '@/components/Credits.vue';
 import Generator from '@/components/Generator.vue';
 import { ref } from '@vue/runtime-core';
-let title = ref("Генератор паролей")
-
-
+let title = ref("Password Generator")
 </script>

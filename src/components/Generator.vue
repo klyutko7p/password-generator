@@ -2,19 +2,19 @@
     <div>
 <div class="text-center p-5 mt-10 bg-white text-black w-2/3 mx-auto">
     <div class="mb-5">
-        <i class=" fi fi-rr-copy-alt text-3xl mr-2 cursor-pointer" title="Копировать в буфер обмена"
+        <i class=" fi fi-rr-copy-alt text-3xl mr-2 cursor-pointer" title="Copy"
             @click="copyPassword"></i>
-        <i class="fi fi-rr-refresh text-3xl cursor-pointer" title="Обновить пароль" @click="getPassword"></i>
+        <i class="fi fi-rr-refresh text-3xl cursor-pointer" title="Update" @click="getPassword"></i>
     </div>
     <h1 class="font-extrabold text-2xl mx-5 overflow-hidden text-ellipsis cursor-pointer" @click="copyPassword">
         {{ password }}</h1>
 </div>
 <div class="bg-white text-black mt-3 p-5 w-2/3 mx-auto">
-    <h1 class="text-xl">Модифицируйте свой пароль</h1>
+    <h1 class="text-xl">Modify your password</h1>
     <hr>
     <div class="lg:flex lg:items-center lg:justify-between">
         <div class="text-2xl">
-            <h1>Количество символов</h1>
+            <h1>Password Length</h1>
             <input type="number" min="1" max="50" @input="getPassword" v-model="passwordLength">
             <input type="range" min="1" max="50" class="custom-range__input" @input="getPassword"
                 v-model="passwordLength">
@@ -22,31 +22,31 @@
         <div>
             <div class="text-2xl">
                 <input type="radio" name="radio" class="mr-3" @input="easyToRead">
-                <label for="">Легко читается</label>
+                <label for="">Easy to Read</label>
             </div>
             <div class="text-2xl">
                 <input type="radio" @input="easyToSay" name="radio" class="mr-3">
-                <label for="">Легко говорится</label>
+                <label for="">Easy to Say</label>
             </div>
         </div>
         <div>
             <div class="text-lg my-2">
                 <input type="checkbox" v-model="includeUppercase" class="mr-3">
-                <label for="">Верхний регистр</label>
+                <label for="">Uppercase</label>
             </div>
             <div class="text-lg my-2">
                 <input type="checkbox" v-model="includeLowercase" class="mr-3">
-                <label for="">Нижний регистр</label>
+                <label for="">Lowercase</label>
             </div>
             <div class="text-lg my-2">
                 <input type="checkbox" v-model="includeNumbers" class="mr-3" :disabled="flag">
-                <label for="">Наличие цифр</label>
+                <label for="">Numbers</label>
             </div>
             <div class="text-lg my-2">
                 <input type="checkbox" v-model="includeSpecial" class="mr-3" :disabled="flag">
-                <label for="">Наличие специальных знаков</label>
+                <label for="">Special signs</label>
             </div>
-            <MyButton @click="getPassword">Обновить настройки</MyButton>
+            <MyButton @click="getPassword">Update settings</MyButton>
         </div>
     </div>
 </div>
@@ -83,7 +83,7 @@ function easyToRead() {
 
 function copyPassword() {
     navigator.clipboard.writeText(password.value);
-    toast.success("Вы успешно скопировали пароль", { timeout: 2000 })
+    toast.success("You success copied password", { timeout: 2000 })
 }
 
 function getPassword() {
